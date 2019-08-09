@@ -22,11 +22,11 @@ defined( 'ABSPATH' ) or die();
  * To prevent any incompatibility we disable WP Rocket page cache but we'll still use the other features.
  */
  
-function disable_page_caching() {
+function managed_hosting_disable_page_caching() {
 	add_filter( 'do_rocket_generate_caching_files', '__return_false' );
 }
 	
-add_filter( 'init', __NAMESPACE__ . '\disable_page_caching' );
+add_filter( 'init', __NAMESPACE__ . '\managed_hosting_disable_page_caching' );
 
 
 /**
