@@ -1,6 +1,8 @@
 # wp-rocket-helpers-test
 
-3 Helpers
+Hi! Here are the 3 Helpers required in the test. 
+Since some of them are already available in our helpers and I've used parts of these codes , I've added 2 extra ones I've built for customers: #4 and #5.
+Thanks! 
 
 - 1 -  [WP Rocket | Managed Hosting Inc. Compatibility](https://github.com/alfonso100/wp-rocket-helpers-test/tree/master/wp-rocket-managed-hosting-compatibility)
 - 2 -  [WP Rocket | No admin cache when user cache is enabled](https://github.com/alfonso100/wp-rocket-helpers-test/tree/master/wp-rocket-no-admin-cache)
