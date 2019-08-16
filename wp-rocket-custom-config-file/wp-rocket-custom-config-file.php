@@ -25,12 +25,10 @@ defined( 'ABSPATH' ) or die();
 function clone_config( $config_files_path ) {
 
 	$site_url = site_url();
-	$home_url = home_url();
-	
-		
+	$home_url = home_url();				
 		
 	if($site_url !== $home_url) {
-		
+
 		$home_url =  preg_replace('#^https?://#', '', untrailingslashit( $home_url )).'.php' ;
 		$site_url =  preg_replace('#^https?://#', '', untrailingslashit( $site_url )).'.php' ;
 
@@ -54,12 +52,37 @@ add_filter( 'rocket_config_files_path', __NAMESPACE__ . '\clone_config' );
  */
  
 function flush_wp_rocket() {
-	if ( ! function_exists( 'rocket_generate_config_file' ) ) {
+	if ( ! function_exists( 'flush_rocket_htaccess' )
+	  || ! function_exists( 'rocket_generate_config_file' )
+	  || ! function_exists( 'rocket_delete_config_file' ) ) {
 		return false;
 	}
+	
+	// Update WP Rocket .htaccess rules.
+	flush_rocket_htaccess();
+
 	// Regenerate WP Rocket config file.
 	rocket_generate_config_file();
+	
 }
 
 register_activation_hook( __FILE__, __NAMESPACE__ . '\flush_wp_rocket' );
- 
+
+
+function deactivate() {
+	
+	// Delete Wp Rocket config files
+	if (  function_exists( 'rocket_delete_config_file' ) {
+		rocket_delete_config_file();
+	}
+	
+	// Remove customizations upon deactivation.
+	remove_filter( 'rocket_config_files_path', __NAMESPACE__ . '\clone_config' );
+	
+	// Flush .htaccess rules, and regenerate WP Rocket config file.
+	flush_wp_rocket();
+
+
+}
+register_deactivation_hook( __FILE__, __NAMESPACE__ . '\deactivate' );
+
