@@ -9,5 +9,5 @@ Thanks!
 - 3 -  [WP Rocket | Country Cookie](https://github.com/alfonso100/wp-rocket-helpers-test/tree/master/wp-rocket-custom-config-file)
 - 4 Extra -  [WP Rocket | Custom Config File](https://github.com/alfonso100/wp-rocket-helpers-test/tree/master/wp-rocket-country-cookies)
 - 5 Extra -  [WP Rocket | Exclude JS from minification and combine at some URLs
-](https://github.com/alfonso100/wp-rocket-helpers-test/tree/wp-rocket-exclude-js-based-on-url)
+](https://github.com/alfonso100/wp-rocket-helpers-test/tree/master/wp-rocket-exclude-js-based-on-url)
 

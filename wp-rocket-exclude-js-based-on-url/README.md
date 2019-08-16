@@ -8,9 +8,9 @@ Replace the examples in this plugin with the site URL and the JS file you'd like
 
 In this case, it will exclude jQuery JS for /quiz/ and its child posts, for example.
 
-https://example.com/**quiz**
-https://example.com/**quiz**/page-1
-https://example.com/**quiz**/page-2
+- https://example.com/quiz
+- https://example.com/quiz/page-1
+- https://example.com/quiz/page-2
 
 
 To be used with:

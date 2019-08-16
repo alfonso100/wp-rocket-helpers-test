@@ -18,6 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 function exclude( $excluded_files ) {
 	
 	//Edit this value to match your current path
+	
 	if(strpos($_SERVER['REQUEST_URI'], 'quiz') !== false):
 						    
 		//Edit the files you'd like to exclude. You can add more lines				    
