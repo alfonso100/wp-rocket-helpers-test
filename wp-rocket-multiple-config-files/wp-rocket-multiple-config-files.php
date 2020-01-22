@@ -7,7 +7,7 @@
  * License:     GNU General Public License v2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *
- * Copyright SAS WP MEDIA 2019
+ * Copyright SAS WP MEDIA 2020
  */
 
 
@@ -20,7 +20,6 @@ defined( 'ABSPATH' ) or die();
 /**
  * Generate multiple config files, add each URL at the $extra_url[] array
  *
- * @author {Author Name}
  */
 function clone_config( $config_files_path ) {
 

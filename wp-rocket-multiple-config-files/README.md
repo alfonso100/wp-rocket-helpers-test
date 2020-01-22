@@ -1,3 +1,3 @@
-# WP Rocket | Custom Config File
+# WP Rocket | Multiple Config Files
 
-Checks if site_url() and home_url() are different, and creates an extra configuration file if needed.
+Useful for cases where there are multiple URLs sharing the same filebase and multiple config files are needed.
